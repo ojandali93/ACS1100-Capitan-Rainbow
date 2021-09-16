@@ -50,9 +50,11 @@ def select(function_code):
     elif function_code == "P":
         print(list_all_items())
 
+    elif function_code == "Q":
+        return False
+
     else:
         print("Wrong Option")
-
 
 def test():
     # create("navy")
@@ -84,15 +86,22 @@ def test():
     # list_all_items()
     # mark_completed(1)
     # list_all_items()
-    print('-------testing user items-----------')
-    # Call your new function with the appropriate value
-    select("C")
-    # View the results
-    list_all_items()
-    # Call function with new value
-    select("R")
-    # View results
-    list_all_items()
-    # Continue until all code is run
+    # print('-------testing user items-----------')
+    # # Call your new function with the appropriate value
+    # select("C")
+    # # View the results
+    # list_all_items()
+    # # Call function with new value
+    # select("R")
+    # # View results
+    # list_all_items()
+    # # Continue until all code is run
+    print('------ Testing Loop ------')
 
 test()
+
+running = True
+while running:
+    selection = input(
+        "Press C to add to list, R to Read from list and P to display list: ")
+    select(selection)
