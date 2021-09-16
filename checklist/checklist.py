@@ -27,6 +27,12 @@ def update(index, item):
 def destroy(index):
     checklist.pop(index)
 
+def list_all_items():
+    index = 0
+    for item in checklist:
+        print(str(index) + ' - ' + item)
+        index += 1
+
 def test():
     create("navy")
     create('blue')
@@ -44,5 +50,14 @@ def test():
     update(8, 'red')
     update(7, 'orange')
     print(checklist)
+    print('-------testing list items-----------')
+    create("purple sox")
+    create("red cloak")
+    print(read(0))
+    print(read(1))
+    update(0, "purple socks")
+    destroy(1)
+    print(read(0))
+    list_all_items()
 
 test()
